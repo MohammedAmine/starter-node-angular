@@ -1,5 +1,15 @@
-<div class="jumbotron text-center">
-	<h1>Nerds and Proud</h1>
-
-	<p>{{ tagline }}</p>
+<div class="page-header">
+    <h1>{{jenkinsMasterNode.nodeDescription}} <small>{{jenkinsMasterNode.mode | lowercase}}</small></h1>
 </div>
+<div class="row">
+    <div class="col-md-3" ng-repeat="job in jenkinsMasterNode.jobs">
+        <div class="panel panel-info ">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{job.name}}</h3>
+            </div>
+            <div class="panel-body" style="background: {{job.color}}">
+            </div>
+        </div>
+    </div>
+</div>
+

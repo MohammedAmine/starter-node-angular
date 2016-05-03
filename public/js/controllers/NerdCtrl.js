@@ -1,5 +1,6 @@
-angular.module('NerdCtrl', []).controller('NerdController', function($scope) {
+angular.module('NerdCtrl', []).controller('NerdController', function ($scope, Nerd) {
 
-	$scope.tagline = 'Nothing beats a pocket protector!';
-
+    Nerd.getJenkinsMasterNode().then(function (jenkinsMasterNode) {
+      $scope.jenkinsMasterNode = jenkinsMasterNode;
+    })
 });

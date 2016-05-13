@@ -1,5 +1,7 @@
 <div class="page-header">
-    <h1>{{jenkinsMasterNode.nodeDescription}} <small>{{jenkinsMasterNode.mode | lowercase}}</small></h1>
+    <h1>{{jenkinsMasterNode.nodeDescription}}
+        <small>Mode : {{jenkinsMasterNode.mode | lowercase}}</small>
+    </h1>
 </div>
 <div class="row">
     <div class="col-md-3" ng-repeat="job in jenkinsMasterNode.jobs">
